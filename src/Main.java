@@ -1,5 +1,6 @@
 import Controller.calculatorController;
 import Factory.operationFactory;
+import Aspects.LoggingAspect;
 
 import java.util.Scanner;
 
@@ -34,6 +35,8 @@ public class Main {
                 System.out.println("Erro: "+ e.getMessage());
             }
         }
+
+        LoggingAspect.exibirHistorico();
 
         sc.close();
     }
